@@ -5,15 +5,12 @@
         <groupId>com.fuimaz.athena</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fuimaz.athena</groupId>
     <artifactId>web</artifactId>
     <packaging>war</packaging>
     <name>web Maven Webapp</name>
     <url>http://maven.apache.org</url>
-
-    
 
 
     <dependencies>
@@ -64,8 +61,33 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
+
+        <!--logback日志-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.classic.version}</version>
+        </dependency>
+
+        <!--sl4j-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.logback-extensions</groupId>
+            <artifactId>logback-ext-spring</artifactId>
+        </dependency>
+
     </dependencies>
+
+
     <build>
-        <finalName>web</finalName>
+        <finalName>athena_web</finalName>
     </build>
 </project>
