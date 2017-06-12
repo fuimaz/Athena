@@ -1,4 +1,4 @@
-package com.fuimaz.athena.jar.mixed;
+package com.fuimaz.athena.mixed;
 
 /**
  * Created by Fuimaz on 2017/3/27.

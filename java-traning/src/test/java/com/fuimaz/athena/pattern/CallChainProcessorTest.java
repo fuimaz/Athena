@@ -1,8 +1,8 @@
-package com.fuimaz.athena.jar.pattern;
+package com.fuimaz.athena.pattern;
 
-import com.fuimaz.athena.jar.pattern.processor.ProcessorA;
-import com.fuimaz.athena.jar.pattern.processor.ProcessorB;
-import com.fuimaz.athena.jar.pattern.processor.ProcessorC;
+import com.fuimaz.athena.pattern.processor.ProcessorA;
+import com.fuimaz.athena.pattern.processor.ProcessorB;
+import com.fuimaz.athena.pattern.processor.ProcessorC;
 import junit.framework.TestCase;
 
 import java.util.function.Function;

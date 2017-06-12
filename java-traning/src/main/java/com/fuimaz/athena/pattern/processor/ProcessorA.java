@@ -1,6 +1,6 @@
-package com.fuimaz.athena.jar.pattern.processor;
+package com.fuimaz.athena.pattern.processor;
 
-import com.fuimaz.athena.jar.pattern.CallChainProcessor;
+import com.fuimaz.athena.pattern.CallChainProcessor;
 
 /**
  * Created by Fuimaz on 2017/6/11.

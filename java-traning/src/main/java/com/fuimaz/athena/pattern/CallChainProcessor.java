@@ -1,4 +1,4 @@
-package com.fuimaz.athena.jar.pattern;
+package com.fuimaz.athena.pattern;
 
 /**
  * Created by Fuimaz on 2017/6/11.
