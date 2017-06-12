@@ -11,6 +11,7 @@
         <module>web</module>
         <module>service</module>
         <module>common</module>
+        <module>java-traning</module>
     </modules>
     <name>Athena Maven Webapp</name>
     <url>http://maven.apache.org</url>
@@ -22,6 +23,10 @@
         <spring.redis.version>1.6.0.RELEASE</spring.redis.version>
         <jredis.client.version>2.7.3</jredis.client.version>
         <fastjson.version>1.2.21</fastjson.version>
+    </properties>
+
+    <properties>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencyManagement>
@@ -51,6 +56,12 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
+                <version>4.3.7.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
                 <version>4.3.7.RELEASE</version>
             </dependency>
 
