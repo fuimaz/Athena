@@ -23,9 +23,6 @@
         <spring.redis.version>1.6.0.RELEASE</spring.redis.version>
         <jredis.client.version>2.7.3</jredis.client.version>
         <fastjson.version>1.2.21</fastjson.version>
-    </properties>
-
-    <properties>
         <java.version>1.8</java.version>
     </properties>
 
