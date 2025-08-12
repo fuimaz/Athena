@@ -1,0 +1,52 @@
+<configuration debug="false" scan="true" scanPeriod="30 seconds">
+	<property name="FILE_PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
+	<property name="LOG_FILE_NAME" value="imgolf" />
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender -->
+		<File>${CATALINA_APPLOG}/logs/${LOG_FILE_NAME}.log</File>
+		<encoder>
+			<pattern>${FILE_PATTERN}</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>32MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+			<fileNamePattern>${CATALINA_APPLOG}/logs/archive/${LOG_FILE_NAME}-%d{yyyy-MM-dd}-%i.log
+			</fileNamePattern>
+			<maxHistory>7</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d [%t] %5p \(%F:%L\) %M\(\) - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<!--打印raptor信息-->
+	<!--<logger name="com.mogujie.raptor" level="INFO" />-->
+	<!--<logger name="com.mogujie.raptor.support" level="INFO" />-->
+
+	<!--修改raptor日志信息-->
+	<logger name="druid.sql" level="${log.level}" addtivity="false">
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="com.alibaba.druid" level="${log.level}" addtivity="false">
+		<appender-ref ref="FILE" />
+	</logger>
+	<logger name="com.mogujie.raptor" level="ERROR" additivity="false">
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<logger name="com.mogujie.tesla" level="ERROR" additivity="true">
+		<appender-ref ref="STDOUT"/>
+	</logger>
+	<logger name="com.mogujie.im.golf" level="${log.level}" additivity="true">
+		<appender-ref ref="FILE"/>
+	</logger>
+
+	<root level="${log.level}">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
